@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+
+  <section>
+    <span class="title">Angular Skeleton</span>
+  </section>
+  <section *ngIf="!isAuthenticated" (click)="login()">
+    <span class="icon material-symbols-outlined">login</span>
+    <span>Login</span>
+  </section>
+  <section *ngIf="isAuthenticated">
+    <span>Username</span>
+    <span class="icon material-symbols-outlined">person</span>
+  </section>
+
+</mat-toolbar>
