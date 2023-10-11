@@ -21,3 +21,10 @@ section {
     font-size: 1rem;
   }
 }
+
+// material overrides
+// to align menu item text and icon
+::ng-deep .mat-mdc-menu-item-text {
+  display: flex;
+  gap: 0.5rem;
+}

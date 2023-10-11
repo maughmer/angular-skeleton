@@ -31,6 +31,11 @@ export class ToolbarComponent {
     this.router.navigateByUrl('login');
   }
 
+  logout() {
+    this.router.navigateByUrl('/');
+    this.eventService.authenticated = false;
+  }
+
   ngOnDestroy() {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }

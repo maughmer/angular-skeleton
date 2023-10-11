@@ -7,9 +7,15 @@
     <span class="material-symbols-outlined">login</span>
     <span>Login</span>
   </section>
-  <section *ngIf="isAuthenticated">
+  <section *ngIf="isAuthenticated" [matMenuTriggerFor]="userMenu">
     <span>Username</span>
     <span class="material-symbols-outlined">person</span>
   </section>
+  <mat-menu #userMenu="matMenu" xPosition="before">
+    <button mat-menu-item (click)="logout()">
+      <span>Logout</span>
+      <span class="icon material-symbols-outlined">logout</span>
+    </button>
+  </mat-menu>
 
 </mat-toolbar>
