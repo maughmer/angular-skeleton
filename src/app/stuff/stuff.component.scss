@@ -17,10 +17,9 @@ section {
   }
 }
 
-span.sub-nav {
+span.home-nav {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  gap: 0.25rem;
 }
 
 mat-panel-description {

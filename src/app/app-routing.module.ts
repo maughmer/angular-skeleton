@@ -13,6 +13,7 @@ import { StuffComponent } from './stuff/stuff.component';
 import { DoodadsComponent } from './stuff-components/doodads/doodads.component';
 import { GizmosComponent } from './stuff-components/gizmos/gizmos.component';
 import { WidgetsComponent } from './stuff-components/widgets/widgets.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent, pathMatch: 'full' },
@@ -23,7 +24,8 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'items', component: ItemsComponent },
       { path: 'things', component: ThingsComponent },
-    ]
+    ],
+    canActivate: [authGuard]
   },
   {
     path: '',
@@ -32,7 +34,8 @@ const routes: Routes = [
       { path: 'doodads', component: DoodadsComponent },
       { path: 'gizmos', component: GizmosComponent },
       { path: 'widgets', component: WidgetsComponent },
-    ]
+    ],
+    canActivate: [authGuard]
   },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '' }
