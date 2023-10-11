@@ -26,7 +26,7 @@ export class LoginComponent {
   }
 
   login(): void {
-    this.router.navigateByUrl('home');
+    this.router.navigateByUrl('dashboard');
     this.eventService.authenticated = true;
   }
 
