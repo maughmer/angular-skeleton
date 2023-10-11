@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+
+import { tap } from 'rxjs';
+
 import { EventService } from './event.service';
-import { map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class AppService {
   private _isAuthenticated: boolean = false;
 
   constructor(
-    private eventService: EventService
+    eventService: EventService
   ) {
     eventService.authenticated$.pipe(
       tap(authenticated => this._isAuthenticated = authenticated)

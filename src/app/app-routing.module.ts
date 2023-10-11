@@ -13,6 +13,7 @@ import { StuffComponent } from './stuff/stuff.component';
 import { DoodadsComponent } from './stuff-components/doodads/doodads.component';
 import { GizmosComponent } from './stuff-components/gizmos/gizmos.component';
 import { WidgetsComponent } from './stuff-components/widgets/widgets.component';
+
 import { authGuard } from './auth.guard';
 
 const routes: Routes = [
