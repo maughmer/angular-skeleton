@@ -12,6 +12,7 @@ as follows:
 > - Stylesheet format: SCSS
 >
 > cd angular-skeleton
+>
 > ng add @angular/material
 > - Prebuilt theme: Indigo/Pink
 > - Material typography: No
