@@ -15,6 +15,10 @@ import { GizmosComponent } from './stuff-components/gizmos/gizmos.component';
 import { WidgetsComponent } from './stuff-components/widgets/widgets.component';
 
 import { authGuard } from './auth.guard';
+import { ElvesComponent } from './fantasy-coponents/elves/elves.component';
+import { TrollsComponent } from './fantasy-coponents/trolls/trolls.component';
+import { DonutsComponent } from './reality-components/donuts/donuts.component';
+import { PizzaComponent } from './reality-components/pizza/pizza.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent, pathMatch: 'full' },
@@ -23,7 +27,13 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
+      // fantasy components
+        { path: 'elves', component: ElvesComponent },
+        { path: 'trolls', component: TrollsComponent },
       { path: 'items', component: ItemsComponent },
+      // reality components
+        { path: 'donuts', component: DonutsComponent },
+        { path: 'pizza', component: PizzaComponent },
       { path: 'things', component: ThingsComponent },
     ],
     canActivate: [authGuard]

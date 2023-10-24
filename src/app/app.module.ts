@@ -24,6 +24,10 @@ import { StuffComponent } from './stuff/stuff.component';
 import { DoodadsComponent } from './stuff-components/doodads/doodads.component';
 import { GizmosComponent } from './stuff-components/gizmos/gizmos.component';
 import { WidgetsComponent } from './stuff-components/widgets/widgets.component';
+import { ElvesComponent } from './fantasy-coponents/elves/elves.component';
+import { TrollsComponent } from './fantasy-coponents/trolls/trolls.component';
+import { DonutsComponent } from './reality-components/donuts/donuts.component';
+import { PizzaComponent } from './reality-components/pizza/pizza.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,10 @@ import { WidgetsComponent } from './stuff-components/widgets/widgets.component';
     DoodadsComponent,
     GizmosComponent,
     WidgetsComponent,
+    ElvesComponent,
+    TrollsComponent,
+    DonutsComponent,
+    PizzaComponent,
   ],
   imports: [
     BrowserModule,

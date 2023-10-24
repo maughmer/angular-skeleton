@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  expand(accordion: HTMLDivElement) {
+    // accordion.className = 'accordion visible';
+    accordion.classList.replace('hidden', 'visible');
+  }
+
+  toggle(accordion: HTMLDivElement) {
+    const list = accordion.classList;
+    if (list.contains('visible')) {
+      list.replace('visible', 'hidden');
+    } else {
+      list.replace('hidden', 'visible');
+    }
+  }
 
 }
