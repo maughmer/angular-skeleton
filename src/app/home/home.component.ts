@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class HomeComponent {
 
   expand(accordion: HTMLDivElement) {
-    // accordion.className = 'accordion visible';
     accordion.classList.replace('hidden', 'visible');
   }
 
